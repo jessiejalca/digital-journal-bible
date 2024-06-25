@@ -1,59 +1,79 @@
-#app {
-    height: 100vh;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+    /* variables */
+    /* --- colors */
+    --dark-blue: #18273A;
+    --blue: #247BA0;
+    --parchment: #DDD4D0;
+    --off-parchment: #d0bfb7;
+    --sorbet: #F46036;
+    --dusty-green: #44503F;
+    /* --- numbers */
+    --border-weight: 1px;
+    /* fonts */
+    --sans-serif: Barlow, Helvetica, sans-serif;
+    --serif: Rasa, Georgia, serif;
+
+    /* global styles */
+    background-color: var(--parchment);
+    color: var(--dark-blue);
+    font-family: var(--sans-serif);
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
-#logo {
-    display: block;
-    width: 50%;
-    height: 50%;
-    margin: auto;
-    padding: 10% 0 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-origin: content-box;
+header {
+    padding: 0.8em 2em;
+    border-bottom: var(--border-weight) var(--dark-blue) solid;
+    display: flex;
+    justify-content: center;
 }
 
-.result {
-    height: 20px;
-    line-height: 20px;
-    margin: 1.5rem auto;
+header p {
+    font-size: 1.4em;
+    font-weight: 600;
 }
 
-.input-box .btn {
-    width: 60px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 3px;
-    border: none;
-    margin: 0 0 0 20px;
-    padding: 0 8px;
-    cursor: pointer;
+.bible-tab {
+    min-width: 400px;
+    font-size: 0.9em;
+    padding: 0.1em 1em;
+    border: var(--border-weight) var(--dark-blue) solid;
+    border-radius: 16px;
+    background-color: var(--off-parchment);
 }
 
-.input-box .btn:hover {
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    color: #333333;
+.bible-tab::placeholder {
+    color: var(--dark-blue);
+    opacity: 0.8;
 }
 
-.input-box .input {
-    border: none;
-    border-radius: 3px;
-    outline: none;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 10px;
-    background-color: rgba(240, 240, 240, 1);
-    -webkit-font-smoothing: antialiased;
+.window {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 24px;
 }
 
-.input-box .input:hover {
-    border: none;
-    background-color: rgba(255, 255, 255, 1);
+.bible {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 0 24px 24px 24px;
+    margin: 24px;
 }
 
-.input-box .input:focus {
-    border: none;
-    background-color: rgba(255, 255, 255, 1);
+.bible h1 {
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.bible h2 {
+    font-family: var(--sans-serif);
+    font-size: 1.1rem;
+    margin: 14px 0;
+}
+
+.bible p {
+    margin-bottom: 12px;
 }
