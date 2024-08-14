@@ -2,13 +2,17 @@
 
 :root {
     /* variables */
-    /* --- colors */
+    /* --- brand colors */
     --dark-blue: #18273A;
     --blue: #247BA0;
     --parchment: #DDD4D0;
     --off-parchment: #d0bfb7;
     --sorbet: #F46036;
     --dusty-green: #44503F;
+    /* --- ui colors */
+    --background-color: var(--parchment);
+    --border-color: var(--dark-blue);
+    --font-color: var(--dark-blue);
     /* --- numbers */
     --border-weight: 1px;
     /* fonts */
@@ -16,8 +20,8 @@
     --serif: Rasa, Georgia, serif;
 
     /* global styles */
-    background-color: var(--parchment);
-    color: var(--dark-blue);
+    background-color: var(--background-color);
+    color: var(--font-color);
     font-family: var(--sans-serif);
     font-weight: 500;
     font-size: 1.1rem;
@@ -28,7 +32,7 @@
     padding: 10px;
 }
 
-.bible {
+main.bible {
     /* typography */
     font-family: var(--serif);
     font-weight: 400;
@@ -37,19 +41,45 @@
     /* container layout */
     height: 100%;
     border-radius: 8px;
-    border: solid 1px var(--dark-blue);
+    border: solid 1px var(--border-color);
 
     /* grid settings */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 5fr 4fr;
+
+    /* section container layouts */
+    section {
+        height: 100%;
+        padding: 16px;
+        overflow: scroll;
+    }
 }
 
-.bible section {
-    height: 100%;
-    padding: 16px;
-    overflow: scroll;
+main.bible section:first-of-type {
+    border-right: dashed 1px var(--border-color);
 }
 
-.bible section:first-of-type {
-    border-right: dashed 1px var(--dark-blue);
+section.bible {
+    h1 {
+        font-family: var(--sans-serif);
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 1em;
+        font-weight: 600;
+        font-style: italic;
+        padding: 10px 0 6px;
+    }
+}
+
+section.notes {
+    display: flex;
+    align-items: start;
+
+    h1 {
+        font-family: var(--sans-serif);
+        font-size:0.8em;
+        flex: 1;
+        border-bottom: solid 1px var(--border-color);
+    }
 }

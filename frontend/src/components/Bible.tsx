@@ -1,7 +1,7 @@
 const Bible = () => {
     return (
         <main className="bible">
-            <section>
+            <section className="bible">
                 <h1>Genesis 21</h1>
                 <h2>The Birth of Isaac</h2>
                 <p>
@@ -19,7 +19,7 @@ const Bible = () => {
                     Abraham that [end]
                 </p>
             </section>
-            <section>
+            <section className="notes">
                 <h1>Notes</h1>
             </section>
         </main>
